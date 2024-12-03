@@ -1,5 +1,6 @@
 import { defineBackend } from '@aws-amplify/backend';
 import { helloWorld } from './function/hello-world/resource';
+import { helloAmplify } from './function/hello-amplify/resource';
 
 const backend = defineBackend({
   helloWorld,
@@ -7,6 +8,6 @@ const backend = defineBackend({
 
 backend.addOutput({
   custom: {
-    helloWorldFunctionName: backend.helloWorld.resources.lambda.functionName,
+    helloWorldFunctionName: backend.helloAmplify.resources.lambda.functionName,
   },
 });
