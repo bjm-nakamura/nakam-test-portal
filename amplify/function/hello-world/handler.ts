@@ -1,7 +1,5 @@
-import { defineFunction } from '@aws-amplify/backend';
+import { Handler } from 'aws-lambda';
 
-export const helloWorld = defineFunction({
-    runtime: 20,
-    name: 'hello-world',
-    entry: './handler.ts',
-})
+export const handler: Handler = async () => {
+    return { message: 'Hello, World!!' }
+}
