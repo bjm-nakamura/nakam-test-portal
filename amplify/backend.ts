@@ -4,7 +4,7 @@ import { helloWorld } from './function/hello-world/resource';
 
 const backend = defineBackend({
   helloWorld,
-  auth,
+  // auth,
 });
 
 backend.addOutput({
