@@ -1,0 +1,365 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa": {
+        "id": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa",
+        "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa",
+        "children": {
+          "deploymentType": {
+            "id": "deploymentType",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/deploymentType",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.171.1"
+            }
+          },
+          "region": {
+            "id": "region",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/region",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.171.1"
+            }
+          },
+          "function": {
+            "id": "function",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function",
+            "children": {
+              "hello-world": {
+                "id": "hello-world",
+                "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world",
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.4.2"
+                }
+              },
+              "hello-world-lambda": {
+                "id": "hello-world-lambda",
+                "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/ServiceRole",
+                    "children": {
+                      "ImportServiceRole": {
+                        "id": "ImportServiceRole",
+                        "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/ServiceRole/ImportServiceRole",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.Resource",
+                          "version": "2.171.1"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ],
+                            "tags": [
+                              {
+                                "key": "amplify:deployment-type",
+                                "value": "sandbox"
+                              },
+                              {
+                                "key": "amplify:friendly-name",
+                                "value": "hello-world"
+                              },
+                              {
+                                "key": "created-by",
+                                "value": "amplify"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                          "version": "2.171.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.Role",
+                      "version": "2.171.1"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.171.1"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/Code/AssetBucket",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                          "version": "2.171.1"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                      "version": "2.171.1"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+                          },
+                          "s3Key": "ad32d14b5b28a26f772a36abc541ba7419d33387ba58991b61994f051f62b5ad.zip"
+                        },
+                        "environment": {
+                          "variables": {
+                            "AMPLIFY_SSM_ENV_CONFIG": "{}"
+                          }
+                        },
+                        "handler": "index.handler",
+                        "memorySize": 512,
+                        "role": {
+                          "Fn::GetAtt": [
+                            "helloworldlambdaServiceRole1E1C4841",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs20.x",
+                        "tags": [
+                          {
+                            "key": "amplify:deployment-type",
+                            "value": "sandbox"
+                          },
+                          {
+                            "key": "amplify:friendly-name",
+                            "value": "hello-world"
+                          },
+                          {
+                            "key": "created-by",
+                            "value": "amplify"
+                          }
+                        ],
+                        "timeout": 3
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                      "version": "2.171.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda_nodejs.NodejsFunction",
+                  "version": "2.171.1"
+                }
+              },
+              "CDKMetadata": {
+                "id": "CDKMetadata",
+                "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/CDKMetadata",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/CDKMetadata/Default",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.171.1"
+                    }
+                  },
+                  "Condition": {
+                    "id": "Condition",
+                    "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/CDKMetadata/Condition",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnCondition",
+                      "version": "2.171.1"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.4.2"
+                }
+              },
+              "amplifynakamtestportalnakamurasandbox1b54df80fafunctionhelloworldlambdaABABC735Ref": {
+                "id": "amplifynakamtestportalnakamurasandbox1b54df80fafunctionhelloworldlambdaABABC735Ref",
+                "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/amplifynakamtestportalnakamurasandbox1b54df80fafunctionhelloworldlambdaABABC735Ref",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnOutput",
+                  "version": "2.171.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.NestedStack",
+              "version": "2.171.1"
+            }
+          },
+          "function.NestedStack": {
+            "id": "function.NestedStack",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function.NestedStack",
+            "children": {
+              "function.NestedStackResource": {
+                "id": "function.NestedStackResource",
+                "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function.NestedStack/function.NestedStackResource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::CloudFormation::Stack",
+                  "aws:cdk:cloudformation:props": {
+                    "tags": [
+                      {
+                        "key": "amplify:deployment-type",
+                        "value": "sandbox"
+                      },
+                      {
+                        "key": "created-by",
+                        "value": "amplify"
+                      }
+                    ],
+                    "templateUrl": {
+                      "Fn::Join": [
+                        "",
+                        [
+                          "https://s3.",
+                          {
+                            "Ref": "AWS::Region"
+                          },
+                          ".",
+                          {
+                            "Ref": "AWS::URLSuffix"
+                          },
+                          "/",
+                          {
+                            "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+                          },
+                          "/c547aacbb14364483104cef6000f0daf37545d71f497fa7d316783cb0768b510.json"
+                        ]
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnStack",
+                  "version": "2.171.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.4.2"
+            }
+          },
+          "definedFunctions": {
+            "id": "definedFunctions",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/definedFunctions",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.171.1"
+            }
+          },
+          "customOutputs": {
+            "id": "customOutputs",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/customOutputs",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnOutput",
+              "version": "2.171.1"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.171.1"
+                }
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/CDKMetadata/Condition",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnCondition",
+                  "version": "2.171.1"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.4.2"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.171.1"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.171.1"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.171.1"
+        }
+      },
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.4.2"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.171.1"
+    }
+  }
+}

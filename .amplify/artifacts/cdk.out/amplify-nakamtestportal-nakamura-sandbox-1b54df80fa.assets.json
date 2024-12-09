@@ -1,0 +1,45 @@
+{
+  "version": "38.0.1",
+  "files": {
+    "ad32d14b5b28a26f772a36abc541ba7419d33387ba58991b61994f051f62b5ad": {
+      "source": {
+        "path": "/Users/nakamura/BJM/三井倉庫/local_portal/nakam-test-portal",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "ad32d14b5b28a26f772a36abc541ba7419d33387ba58991b61994f051f62b5ad.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "c547aacbb14364483104cef6000f0daf37545d71f497fa7d316783cb0768b510": {
+      "source": {
+        "path": "amplifynakamtestportalnakamurasandbox1b54df80fafunctionB37D882C.nested.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "c547aacbb14364483104cef6000f0daf37545d71f497fa7d316783cb0768b510.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "69662ec5d6aaf78fa9147f7a5cb100332a761bdfa1e506d0c17bc6cb19a5de7e": {
+      "source": {
+        "path": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "69662ec5d6aaf78fa9147f7a5cb100332a761bdfa1e506d0c17bc6cb19a5de7e.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

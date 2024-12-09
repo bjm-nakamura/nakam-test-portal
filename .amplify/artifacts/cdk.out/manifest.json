@@ -1,0 +1,150 @@
+{
+  "version": "38.0.1",
+  "artifacts": {
+    "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "amplify:deployment-type": "sandbox",
+          "created-by": "amplify"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/69662ec5d6aaf78fa9147f7a5cb100332a761bdfa1e506d0c17bc6cb19a5de7e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa.assets"
+      ],
+      "metadata": {
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "amplify:deployment-type",
+                "Value": "sandbox"
+              },
+              {
+                "Key": "created-by",
+                "Value": "amplify"
+              }
+            ]
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/deploymentType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deploymentType"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "region"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloworldlambdaServiceRole1E1C4841"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/hello-world-lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloworldlambda89B27E55"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function/amplifynakamtestportalnakamurasandbox1b54df80fafunctionhelloworldlambdaABABC735Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifynakamtestportalnakamurasandbox1b54df80fafunctionhelloworldlambdaABABC735Ref"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/function.NestedStack/function.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "function1351588B"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/definedFunctions": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "definedFunctions"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/customOutputs": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "customOutputs"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/amplify-nakamtestportal-nakamura-sandbox-1b54df80fa/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "amplify-nakamtestportal-nakamura-sandbox-1b54df80fa"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
